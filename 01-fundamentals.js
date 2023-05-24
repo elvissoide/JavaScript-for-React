@@ -1,37 +1,13 @@
 'use strict';
+const puntajeEquipos = [30,26,24,22]
+const productos = ["Arroz","Cebada","Tomate","Paiteña","Culantro","Cerveza"]
+const personas = ["Elvis","Robert","Camila","Daniel","Mateus","Esteban","Darwin"]
+const datosPersona = ["Elvis","Guanoluisa",23,false,{parroquia:"Nayon"},["Full-Stack","Data Analyst"]]
 
-const jugador = {
-    nombre: "Elvis",
-    apellido: "Guanoluisa",
-    edad: 28,
-    direccion: {
-        ciudad: "Quito",
-        telefono: "0988815272",
-        direcccion: {
-            principal: "Eugenio Espejo",
-            secundaria: "Carlos Dousdebes",
-        }
-    },
-    amigos: ['Frank', 'Gaby', 'Karol'],
-    estado: true,
-    enviarCorreo() {
-        return `Enviando correo a ${this.amigos[0]}`
-    },
-    enviarNotificacion() {
-        return `Enviando notifiacion a ${this.amigos[2]}`
-    }
-};
+// // spread operator
+const newNames = [...productos,...personas]
+console.log(newNames);
 
-console.log(jugador.estado);
-console.log(jugador.amigos);
-console.log(jugador.enviarCorreo());
-console.log(jugador.enviarNotificacion);
-
-// Agregar un par de clave y valor al objeto
-jugador.semstre = "cuarto"
-console.log(jugador);
-
-// Eliminar un par de clave y valor del objeto
-delete jugador.state
-
-console.log(jugador);
+console.log("Número de elementos:", personas.length);
+console.log("Número de elementos:", productos.length);
+console.log("Número de elementos:", puntajeEquipos.length);
